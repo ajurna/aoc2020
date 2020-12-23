@@ -8,6 +8,7 @@ authors = ["Your Name <you@example.com>"]
 python = "^3.9.0"
 regex = "^2020.11.13"
 numpy = "1.19.3"
+line-profiler = {path = "line_profiler-3.1.0-cp39-cp39-win_amd64.whl"}
 
 [tool.poetry.dev-dependencies]
 

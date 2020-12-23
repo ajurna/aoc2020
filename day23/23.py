@@ -23,19 +23,18 @@ for c in data:
     last_cup = cup
 last_cup.next_cup = first_cup
 
-
 def rotate_cups(first_cup, cups, rotations):
+    max_key = max(cups.keys())
     cup = first_cup
     for _ in range(rotations):
         a = cup.next_cup
-        b = a.next_cup
-        c = b.next_cup
+        c = a.next_cup.next_cup
         dest = cup.value - 1
         while True:
-            if dest in [a.value, b.value, c.value]:
+            if dest in [a.value, a.next_cup.value, c.value]:
                 pass
             elif dest < 0:
-                dest = max(cups.keys())
+                dest = max_key
                 continue
             elif dest in cups:
                 dest_cup = cups[dest]
